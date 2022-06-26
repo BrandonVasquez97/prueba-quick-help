@@ -38,7 +38,7 @@ def generarCSV(data):
     fecha = loc_dt.strftime(fmt)
     titulo = "archivo_" + str(fecha) + ".csv"
 
-    with open('api/CSVs/' + titulo, 'w', encoding='UTF8', newline='') as f:
+    with open('./CSV_generados/' + titulo, 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -46,7 +46,7 @@ def generarCSV(data):
 
         # write multiple rows
         writer.writerows(data)
-    return Out_response(False, f"CSV generado en la carpeta CSVs con el nombre de: {titulo}")
+    return Out_response(False, f"CSV generado en la carpeta CSV_generados con el nombre de: {titulo}")
 
 def cargarCSV(csv_file):
     if not csv_file.name.endswith('.csv'):
