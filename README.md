@@ -3,7 +3,7 @@
 # Clonar repositorio
 En la terminal del git bash clonan con el siguiente comando: 
 
-https://github.com/BrandonVasquez97/prueba-quick-help.git
+git clone https://github.com/BrandonVasquez97/prueba-quick-help.git
 
 Despues acceden a la carpeta:
 
