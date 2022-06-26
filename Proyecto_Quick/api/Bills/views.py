@@ -5,7 +5,7 @@ from api.conn import executeCommit, executeQuerydict
 def listar(data):
     id = data.get("id", "")
     if id == "":
-        query = f"SELECT * FROM api_bills"
+        query = f"SELECT * FROM api_bills AS A INNER JOIN api_bills_products AS B ON A.id = B.bill_id_id"
         res = executeQuerydict(query)
         if(res == "error"):
             return Out_response(False, "Error en consulta para listar facturas")
@@ -18,14 +18,15 @@ def listar(data):
                         "company_name": i["company_name"],
                         "nit": i["nit"],
                         "code": i["code"],
-                        "client_id": i["client_id_id"]
+                        "client_id": i["client_id_id"],
+                        "product_id": i["product_id_id"]
                     }
                     facturas.append(factura)
                 return Out_response(False, "Listar facturas", facturas)
             else:
                 return Out_response(False, "No hay clientes para listar")
     else:
-        query = f"SELECT * FROM api_bills WHERE id = {id}"
+        query = f"SELECT * FROM api_bills AS A INNER JOIN api_bills_products AS B ON A.id = B.bill_id_id WHERE A.id = {id}"
         res = executeQuerydict(query)
         if(res == "error"):
             return Out_response(False, "Error en consulta para listar la factura")
