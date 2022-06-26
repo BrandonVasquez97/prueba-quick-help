@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from .secrets import HOST, USER, PASS
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
