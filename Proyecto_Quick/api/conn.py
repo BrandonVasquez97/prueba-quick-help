@@ -1,6 +1,5 @@
 import json
 import pymysql
-import boto3
 import base64
 from datetime import datetime
 from pytz import timezone
