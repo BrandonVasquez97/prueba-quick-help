@@ -1,4 +1,5 @@
 # Pasos para correr la aplicación
+Tener en cuenta que la Base de datos no es necesario montarla pues esta en la nube montada en una RDS en AWS, igual hay sql de su estructura
 
 # Clonar repositorio
 En la terminal del git bash clonan con el siguiente comando: 
