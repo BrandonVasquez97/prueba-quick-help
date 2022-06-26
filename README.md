@@ -1,5 +1,5 @@
 # Pasos para correr la aplicación
-Tener en cuenta que la Base de datos no es necesario montarla pues esta en la nube montada en una RDS en AWS, igual hay sql de su estructura
+Tener en cuenta que la Base de datos no es necesario montarla pues esta en la nube montada en una RDS en AWS, igual hay sql de su estructura, el usuario y la contraseña fue compartida en el correo
 
 # Clonar repositorio
 En la terminal del git bash clonan con el siguiente comando: 
@@ -56,6 +56,9 @@ La carpeta Usuario tiene para loguear y crear usuario
 Es necesario loguearse para usar las apis, con la api de loguear usuario podran acceder y retornara un token el cual se debe colocar para las demas apis en el cuerpo de la peticion, estara especificado con la clave "token"
 
 Importante a tener en cuenta que todas las apis estan diseñadas para que la peticion se haga con un JSON en la opcion Body-raw del postman, la unica exepcion es la api de cargar CSV que se diseño con un form-data con dos KEY una llamada csv_file y otra token, en el VALUE para csv_file podran subir el archivo y el VALUE del token debe estar el token entregado al loguearse
+
+# Archivos CSV
+Los CSV que se generen se almacenan en la carpeta CSV_generados, dentro de la carpeta del proyecto django Proyecto_Quick
 
 # Cargando el CSV
 Ya explicado como consumir esta api, tener en cuenta que en el proyecto hay una plantilla llamada plantilla_cargue_de_clientes.csv para que funcione correctamente el cargue del documento se debe seguir el formato de esa plantilla donde la primera fila sera el encabezado y las demas podran colocar los datos del cliente
