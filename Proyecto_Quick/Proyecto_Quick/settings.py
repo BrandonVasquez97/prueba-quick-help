@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'Proyecto_Quick.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': HOST,
+        'HOST': "database-aws.cdg2ikq7roav.us-east-2.rds.amazonaws.com",
         'PORT': 3306,
-        'USER': USER,
-        'PASSWORD': PASS,
+        'USER': "admin",
+        'PASSWORD': "130197bvb97",
         'NAME': 'quick_api'
     }
 }

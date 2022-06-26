@@ -11,11 +11,11 @@ def executeCommit(query):
     try:
         print("executeCommit", query)
         #Obtiene las credenciales con el SECRET MANAGER
-        credenciales = json.loads(get_secret_db("commit"))
+        #credenciales = json.loads(get_secret_db("commit"))
         #Llamado de datos del JSON
-        endpoint = credenciales['endpoint']
-        db_user = credenciales['user']
-        db_pass = credenciales['password']
+        endpoint = "database-aws.cdg2ikq7roav.us-east-2.rds.amazonaws.com"
+        db_user = "admin"
+        db_pass = "130197bvb97"
         db_name = "quick_api"
         connection = pymysql.connect(
             host=endpoint, user=db_user, password=db_pass, db=db_name, port=3306)
@@ -41,11 +41,12 @@ def executeQuery(query):
     try:
         print("executeQuery", query)
         #Obtiene las credenciales con el SECRET MANAGER
-        credenciales = json.loads(get_secret_db("commit"))
+        #credenciales = json.loads(get_secret_db("commit"))
         #Llamado de datos del JSON
-        endpoint = credenciales['endpoint']
-        db_user = credenciales['user']
-        db_pass = credenciales['password']
+        endpoint = "database-aws.cdg2ikq7roav.us-east-2.rds.amazonaws.com"
+        db_user = "admin"
+        db_pass = "130197bvb97"
+        db_name = "quick_api"
         db_name = "quick_api"
         connection = pymysql.connect(
             host=endpoint, user=db_user, password=db_pass, db=db_name, port=3306)
@@ -74,11 +75,11 @@ def executeQuerydict(query):
     try:
         print("executeQuery", query)
         #Obtiene las credenciales con el SECRET MANAGER
-        credenciales = json.loads(get_secret_db("commit"))
+        #credenciales = json.loads(get_secret_db("commit"))
         #Llamado de datos del JSON
-        endpoint = credenciales['endpoint']
-        db_user = credenciales['user']
-        db_pass = credenciales['password']
+        endpoint = "database-aws.cdg2ikq7roav.us-east-2.rds.amazonaws.com"
+        db_user = "admin"
+        db_pass = "130197bvb97"
         db_name = "quick_api"
         connection = pymysql.connect(
             host=endpoint, user=db_user, password=db_pass, db=db_name, port=3306)
